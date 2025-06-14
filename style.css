@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+header {
+  width: 100%;
+}
+
+nav {
+  
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 7px;
+  width: 100%;  
+  background-color: #333;
+  color: rgb(206, 192, 192);
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    gap: 30px;
+    
+}
+ul li {
+  display: inline-block;
+}
+h1 {
+    text-align: center;
+}
+
+
+body{
+    /* https://grabient.com/HQVg7AnANKAMCMMQGYAcSAsYZgGyxlwCZFgTthldkZ4JsCjhYIMoNh5UIg/ */
+
+    background: linear-gradient(135deg, rgba(255, 255, 196, 1.000) 0.000%, rgba(255, 97, 100, 1.000) 50.000%, rgba(176, 0, 18, 1.000) 100.000%);
+    background-size: 400% 400%;
+    animation: gradientBG 5s ease infinite;
+    font-family: 'Roboto',sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
+    margin: 0;
+    overflow-x:hidden ;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1{
+    margin:10px;
+
+}
+
+.box{
+    background-color: #e4d4f4;
+    color: #332233;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin:10px;
+    border-radius: 10px;
+    box-shadow:2px 4px 5px #fff;
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+.box:nth-of-type(even){
+    transform: translateX(-400%);
+}
+
+.box.show{
+    transform: translateX(0);
+}
+.box h2 {
+  font-size: 45px;
+}
+
+
